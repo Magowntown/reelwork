@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- ... -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="flex justify-between bg-white border-t-0 border-r-0 border-b border-l-0 border-[#e2e2ea]">
+        <div class="flex items-center flex-grow-0 flex-shrink-0 relative gap-1.5 pl-0.5 pr-px pt-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" version="1" id="camera">
+                <path fill="#3a6c87"
+                    d="M32 16c0 8.824-7.176 16-16.053 16S0 24.824 0 16 7.123 0 16 0c8.877 0 16 7.176 16 16z"></path>
+                <path fill="#2f536e"
+                    d="M19.943 31.44c.769-.198 1.537-.396 2.256-.7a16.04 16.04 0 0 0 5.104-3.431 16.1 16.1 0 0 0 3.437-5.086c.406-.957.72-1.962.934-3.002.078-.379.069-.784.119-1.172l-10.18-10.18-.027-.027c-.037-.037-.08-.066-.12-.1-.048-.041-.093-.086-.146-.123-.047-.033-.1-.057-.15-.086-.054-.03-.104-.066-.16-.092-.07-.03-.146-.048-.219-.07-.04-.012-.08-.032-.121-.04a1.704 1.704 0 0 0-.742-.003 1.864 1.864 0 0 0-.944.522c-.34.347-.554.827-.554 1.36 0 .096.012.189.025.28l-1.64-1.64a1.87 1.87 0 0 0-1.323-.56c-1.014 0-1.869.853-1.869 1.92 0 .128.014.252.037.372.008.04.023.076.033.115.022.081.044.16.077.237.016.04.039.075.058.113.034.065.068.131.11.191.029.043.064.08.097.12.03.034.054.073.086.105l.084.084h-.902c-.748 0-1.334.587-1.334 1.281v.053L8.656 9.959c-.053-.053-.16-.055-.213-.055-.106.054-.213.161-.213.268v9.453c0 .066.03.116.069.16.004.004.002.012.006.016l11.638 11.638z">
+                </path>
+                <path fill="#fff"
+                    d="M15.493 7.288c-1.015 0-1.87.855-1.87 1.923 0 .534.214 1.015.588 1.335h-.908c-.747 0-1.335.587-1.335 1.282v.053l-3.31-1.922c-.054-.054-.161-.054-.215-.054-.106.054-.213.16-.213.267v9.452c0 .214.267.32.427.267l3.311-1.922c.107.64.64 1.121 1.282 1.121h.854v.801c0 .16.107.267.267.267h1.763l-1.496 4.166c-.053.16 0 .32.16.374.16.053.32-.054.374-.214l1.549-4.326h2.777l1.709 4.326c.053.16.213.267.374.16.16-.053.213-.267.106-.373l-1.655-4.113H21.9c.16 0 .267-.106.267-.267v-.8h.32a1.3 1.3 0 0 0 1.282-1.282v-5.981c0-.748-.587-1.282-1.282-1.282h-.907c.373-.374.587-.801.587-1.335 0-1.015-.854-1.923-1.87-1.923-1.014 0-1.868.855-1.868 1.923 0 .534.213 1.015.587 1.335h-2.19c.375-.374.588-.801.588-1.335-.053-1.068-.908-1.923-1.922-1.923z">
+                </path>
+            </svg><svg width="61" height="16" viewBox="0 0 61 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="flex-grow-0 flex-shrink-0" preserveAspectRatio="none">
+                <path
+                    d="M3.96 15.59C6.952 15.59 9.13 13.962 9.13 10.508V0.652034H5.984V10.464C5.984 11.872 5.082 12.818 3.696 12.818C2.684 12.818 1.936 12.312 1.364 11.762L0 14.138C1.056 15.172 2.464 15.59 3.96 15.59Z"
+                    fill="#0BAB7C"></path>
+                <path
+                    d="M18.9932 15.59C23.4152 15.59 26.6492 12.422 26.6492 8.00003C26.6492 3.57803 23.4152 0.410034 18.9932 0.410034C14.5492 0.410034 11.3152 3.57803 11.3152 8.00003C11.3152 12.422 14.5492 15.59 18.9932 15.59ZM18.9932 12.818C16.2652 12.818 14.5272 10.728 14.5272 8.00003C14.5272 5.25003 16.2652 3.18203 18.9932 3.18203C21.6992 3.18203 23.4372 5.25003 23.4372 8.00003C23.4372 10.728 21.6992 12.818 18.9932 12.818Z"
+                    fill="#0BAB7C"></path>
+                <path
+                    d="M36.8055 15.326C39.6215 15.326 41.0735 13.566 41.0735 11.344C41.0735 9.51803 39.8415 8.00004 38.2575 7.75804C39.6435 7.47203 40.7875 6.21803 40.7875 4.39204C40.7875 2.43403 39.3575 0.652034 36.5635 0.652034H28.8415V15.326H36.8055ZM35.8815 6.48204H31.9655V3.40203H35.8815C36.9375 3.40203 37.5975 4.04003 37.5975 4.94203C37.5975 5.88803 36.9375 6.48204 35.8815 6.48204ZM36.0135 12.576H31.9655V9.23203H36.0135C37.2235 9.23203 37.8835 9.98004 37.8835 10.904C37.8835 11.96 37.1795 12.576 36.0135 12.576Z"
+                    fill="#0BAB7C"></path>
+                <path d="M46.5534 15.326V0.652034H43.4294V15.326H46.5534Z" fill="#0BAB7C"></path>
+                <path d="M56.0005 15.326V3.40203H60.2685V0.652034H48.5645V3.40203H52.8545V15.326H56.0005Z"
+                    fill="#0BAB7C"></path>
+            </svg>
+        </div>
+        <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-[191px]">
+            <div class="flex justify-start items-start flex-grow-0 flex-shrink-0 w-[544px] gap-[30px]">
+                <div
+                    class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2.5 py-[23px] border-t-0 border-r-0 border-b border-l-0 border-[#0bab7c]">
+                    <p class="flex-grow-0 flex-shrink-0 text-base font-bold text-left text-[#0bab7c]">
+                        Overview
+                    </p>
+                </div>
+                <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2.5 py-[23px]">
+                    <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#92929d]">
+                        Job Search
+                    </p>
+                </div>
+                <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2.5 py-[23px]">
+                    <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#92929d]">
+                        Talent
+                    </p>
+                </div>
+                <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2.5 py-[23px]">
+                    <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#92929d]">
+                        Schedule
+                    </p>
+                </div>
+                <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2.5 py-[23px]">
+                    <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#92929d]">
+                        History
+                    </p>
+                </div>
+                <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2.5 py-[23px]">
+                    <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#92929d]">
+                        Events
+                    </p>
+                </div>
+            </div>
+            <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-10">
+                <div
+                    class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1.5 px-2.5 py-[7px] rounded-[10px] bg-[#0bab7c]/10">
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="flex-grow-0 flex-shrink-0 w-5 h-5 relative" preserveAspectRatio="xMidYMid meet">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M16.1019 9.16671H11.1019V4.16671C11.1019 3.70587 10.7286 3.33337 10.2686 3.33337C9.8086 3.33337 9.43526 3.70587 9.43526 4.16671V9.16671H4.43526C3.97526 9.16671 3.60193 9.53921 3.60193 10C3.60193 10.4609 3.97526 10.8334 4.43526 10.8334H9.43526V15.8334C9.43526 16.2942 9.8086 16.6667 10.2686 16.6667C10.7286 16.6667 11.1019 16.2942 11.1019 15.8334V10.8334H16.1019C16.5619 10.8334 16.9353 10.4609 16.9353 10C16.9353 9.53921 16.5619 9.16671 16.1019 9.16671"
+                            fill="#0BAB7C"></path>
+                    </svg>
+                    <p class="flex-grow-0 flex-shrink-0 text-[13px] font-medium text-left text-[#0bab7c]">
+                        Post Job
+                    </p>
+                </div>
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="flex-grow-0 flex-shrink-0 w-6 h-6 relative" preserveAspectRatio="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.78316 16L6.96316 14.818C7.34116 14.44 7.54916 13.938 7.54916 13.404V8.72696C7.54916 7.36996 8.13916 6.07296 9.16916 5.17096C10.2072 4.26096 11.5292 3.86096 12.9062 4.04196C15.2332 4.35096 16.9882 6.45495 16.9882 8.93696V13.404C16.9882 13.938 17.1962 14.44 17.5732 14.817L18.7542 16H5.78316ZM14.2682 18.341C14.2682 19.24 13.3522 20 12.2682 20C11.1842 20 10.2682 19.24 10.2682 18.341V18H14.2682V18.341ZM20.7892 15.208L18.9882 13.404V8.93696C18.9882 5.45596 16.4862 2.49896 13.1682 2.05996C11.2462 1.80396 9.30616 2.39096 7.85116 3.66696C6.38716 4.94896 5.54916 6.79296 5.54916 8.72696L5.54816 13.404L3.74716 15.208C3.27816 15.678 3.13916 16.377 3.39316 16.99C3.64816 17.604 4.24116 18 4.90516 18H8.26816V18.341C8.26816 20.359 10.0622 22 12.2682 22C14.4742 22 16.2682 20.359 16.2682 18.341V18H19.6312C20.2952 18 20.8872 17.604 21.1412 16.991C21.3962 16.377 21.2582 15.677 20.7892 15.208Z"
+                        fill="#92929D"></path>
+                </svg><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="flex-grow-0 flex-shrink-0 w-6 h-6 relative" preserveAspectRatio="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M19.2686 18H5.26855C4.71755 18 4.26855 17.552 4.26855 17V7.25L11.6686 12.8C11.8466 12.934 12.0576 13 12.2686 13C12.4796 13 12.6906 12.934 12.8686 12.8L20.2686 7.25V17C20.2686 17.552 19.8196 18 19.2686 18ZM18.6016 6L12.2686 10.75L5.93555 6H18.6016ZM19.2686 4H5.26855C3.61455 4 2.26855 5.346 2.26855 7V17C2.26855 18.654 3.61455 20 5.26855 20H19.2686C20.9226 20 22.2686 18.654 22.2686 17V7C22.2686 5.346 20.9226 4 19.2686 4Z"
+                        fill="#92929D"></path>
+                </svg>
+                <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
+                    <div
+                        class="flex-grow-0 flex-shrink-0 w-[34px] h-[34px] relative overflow-hidden rounded-[10px] bg-[#fddd8c] border border-[#92929d]/10">
+                        <img src="./images/assets/profile.png" alt="profile
+                                class=" w-[52px] h-[45px] absolute left-[-7px] top-[-1px] object-none" />
+                    </div>
+                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="flex-grow-0 flex-shrink-0 w-[18px] h-[18px] relative"
+                        preserveAspectRatio="xMidYMid meet">
+                        <path d="M4.76855 6.75L9.26855 11.25L13.7686 6.75" stroke="#808191" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcome Banner + Date/Time -->
+    <section>
+        <div id="welcome-date">
+            <div id="tsectioncontainer">
+                <div id="welcome-name">
+                    <h1>Welcome, <span id="name">Name</span></h1>
+                </div>
+                <div id="date">
+                    <div id="date-display">Date</div>
+                </div>
+                <div id="time-container-clock">
+                    <div id="time-container-clock-hours"></div>
+                    <div id="time-container-clock-minutes"></div>
+                    <div id="time-container-clock-seconds"></div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- //END -->
+
+    <!-- Personal Metrics -->
+    <main>
+        <summary id="account-metrics">
+            <div><a href="">Metric 1</a></div>
+            <div><a href="">Metric 2</a></div>
+            <div><a href="">Metric 3</a></div>
+            <div><a href="">Metric 4</a></div>
+        </summary> <!-- //END -->
+
+        <!-- Application Metrics -->
+        <figure id="applic-metrics">
+            <div id="title"></div>
+            <div>
+                <p>Views</p>
+                <p>applications</p>
+            </div>
+            <div id="graph">
+                <a href="#"></a>
+            </div>
+        </figure> <!-- //END -->
+
+        <!-- Scheduling Section -->
+        <details id="appts">
+            <div id="sched-title">
+                <h3>Schedule</h3>
+                <select name="" id="" id="sort-by">sort By</select>
+            </div>
+            <div id="appt-list">
+                <ul id="appt-item">
+                    <li><a href="">Meeting</a></li>
+                    <li><a href="">Meeting</a></li>
+                    <li><a href="">Meeting</a></li>
+                </ul>
+            </div>
+        </details>
+    </main> <!-- //END -->
+
+    <!-- Job Listings Section -->
+    <main id="job-postings">
+        <div id="job-cards">
+            <div>
+                <img src="" alt="logo">
+                <a href="">Job Listing</a>
+            </div>
+            <div>
+                <img src="" alt="logo">
+                <a href="">Job Listing</a>
+            </div>
+            <div>
+                <img src="" alt="logo">
+                <a href="">Job Listing</a>
+            </div>
+            <div>
+                <img src="" alt="logo">
+                <a href="">Job Listing</a>
+            </div>
+        </div>
+    </main><!-- //END -->
+
+    <!-- Job Recommendations Section -->
+    <aside id="recommendations">
+        <div id="recom-list">
+            <a href="">recomjobs</a>
+            <a href="">recomjobs</a>
+            <a href="">recomjobs</a>
+            <a href="">recomjobs</a>
+        </div>
+    </aside><!-- //END -->
+
+    <!-- Footer Section -->
+    <div id="footer">
+        <div id="footer-info">
+            <div id="footer-info-links">
+                <a href="">About</a>
+                <a href="">Contact</a>
+                <a href="">Terms of Use</a>
+                <a href="">Privacy Policy</a>
+            </div>
+            <div id="footer-info-copy">
+                <p>&copy; 2020</p>
+            </div>
+        </div>
+    </div> <!-- //END -->
+
+</body>
+
+</html>
