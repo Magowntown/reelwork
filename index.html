@@ -9,126 +9,115 @@
 </head>
 
 <body class="bg-gray-100">
-    <!-- Navbar -->
-    <nav class="bg-white p-6 flex items-center justify-between shadow-md">
-        <div class="flex items-center">
-            <img src="logo.png" alt="Logo" class="h-10 w-10 mr-4">
-            <a href="#" class="mx-3 text-gray-800">Home</a>
-            <a href="#" class="mx-3 text-gray-800">Job Postings</a>
-            <a href="#" class="mx-3 text-gray-800">Find Crews</a>
-        </div>
-        <div class="flex items-center">
-            <a href="#" class="mx-3 text-gray-800">Contact us</a>
-            <a href="#" class="mx-3 text-gray-800">Sign In</a>
-        </div>
-    </nav>
-    <!-- Main -->
-    <main class="flex justify-between p-6">
-        <!-- Search Bar -->
-        <section class="w-1/4 mr-4">
-            <div class="mb-4">
-                <input type="text" placeholder="Job title or keyword" class="w-full p-2 border border-gray-300 rounded">
-                <input type="text" placeholder="Location" class="w-full p-2 border border-gray-300 rounded mt-2">
+    <!-- Nav -->
+    <div class="navbar bg-base-100">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h7" />
+                    </svg>
+                </label>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a>Homepage</a></li>
+                    <li><a>Portfolio</a></li>
+                    <li><a>About</a></li>
+                </ul>
             </div>
-            <button class="btn btn-primary mb-4">Search</button>
-            <div>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a>All Jobs</a></li>
+                <li tabindex="0">
+                    <details>
+                        <summary>Your Jobs</summary>
+                        <ul class="p-2">
+                            <li><a>Past</a></li>
+                            <li><a>Current</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a>Upcoming</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <button class="btn btn-ghost btn-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </button>
+            <button class="btn btn-ghost btn-circle">
+                <div class="indicator">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                    </svg>
+                    <span class="badge badge-xs badge-primary indicator-item"></span>
+                </div>
+            </button>
+            <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                    <div class="w-10 rounded-full">
+                        <img src="./images/assets/profile.png" />
+                    </div>
+                </label>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li>
+                        <a class="justify-between">
+                            Profile
+                            <span class="badge">New</span>
+                        </a>
+                    </li>
+                    <li><a>Settings</a></li>
+                    <li><a>Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <main class="grid grid-cols-3 grid-rows-1 gap-4">
+        <!-- Search Bar -->
+        <section class="grid grid-cols-1 gap-4 grid-rows-2">
+            <div class="join">
+                <input class="input input-bordered join-item" placeholder="Job title or keyword" />
+                <input class="input input-bordered join-item" placeholder="Location" />
+                <button class="btn join-item">Search</button>
+            </div>
+            <div class="join">
                 <h2 class="text-lg font-bold mb-2">Filter Parameters</h2>
                 <button class="btn btn-outline mb-2">Filter 1</button>
                 <button class="btn btn-outline mb-2">Filter 2</button>
             </div>
         </section>
-        <!-- Job Postings -->
-        <section class="w-1/2">
-            <!-- Hero -->
-            <div class="hero min-h-screen"
-                style="background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
-                <div class="hero-overlay bg-opacity-60"></div>
-                <div class="hero-content text-center text-neutral-content">
-                    <div class="max-w-md">
-                        <button class="btn btn-primary">Get Started</button>
+
+        <!-- Main Feed-->
+        <section class="grid grid-cols-1">
+            <div class="card lg:card-side w-10 bg-base-100 shadow-xl">
+                <figure><img src="./images/assets/pngwing.com (2).png" alt="Album" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">New Job just Posted!</h2>
+                    <p>Click the button to find more info.</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Learn More</button>
                     </div>
                 </div>
             </div>
-            <h1 class="flex items-center justify-center text-2xl font-bold mb-4">Job Postings</h1>
-            <!-- Job Cards -->
-            <div class="flex flex-col items-center justify-center">
-                <div class="card space-x-1 w-1/2 border bg-base-100 shadow-xl">
-                    <figure><img src="./images/assets/pngwing.com (2).png" alt="Job" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">
-                            New Job!
-                            <div class="badge badge-secondary">NEW</div>
-                        </h2>
-                        <p>New Local Job!</p>
-                        <div class="card-actions justify-end">
-                            <div class="badge badge-outline">Commercial</div>
-                            <div class="badge badge-outline">Production</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card w-1/2 border bg-base-100 shadow-xl">
-                    <figure><img src="./images/assets/pngwing.com (2).png" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">
-                            New Job!
-                            <div class="badge badge-secondary">NEW</div>
-                        </h2>
-                        <p>New Local Job!</p>
-                        <div class="card-actions justify-end">
-                            <div class="badge badge-outline">Commercial</div>
-                            <div class="badge badge-outline">Production</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card w-1/2 border bg-base-100 shadow-xl">
-                    <figure><img src="./images/assets/pngwing.com (2).png" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">
-                            New Job!
-                            <div class="badge badge-secondary">NEW</div>
-                        </h2>
-                        <p>New Local Job!</p>
-                        <div class="card-actions justify-end">
-                            <div class="badge badge-outline">Commercial</div>
-                            <div class="badge badge-outline">Production</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Job Cards Ends -->
         </section>
-        <!-- Suggested Jobs and Metrics -->
-        <section class="w-1/4 ml-4">
-            <!-- Suggested Jobs -->
-            <div>
-                <h2 class="text-lg font-bold mb-2">Suggested Jobs</h2>
-                <!-- Job Cards -->
-                <div class="card bordered mb-4">
-                    <div class="card-body">
-                        <h2 class="card-title">Job title</h2>
-                        <p>Job description...</p>
-                    </div>
-                </div>
-                <!-- More cards... -->
-            </div>
-            <!-- Metrics -->
-            <div>
-                <h2 class="text-lg font-bold mb-2">Your Metrics</h2>
-                <div class="p-2 bg-white shadow rounded">
-                    <p class="stat-desc"><strong>Jobs Applied:</strong> Jan 1st - Feb 1st</p>
-                    <div class="stat">
-                        <div class="stat-figure">101</div>
-                    </div>
-                    <p><strong>Jobs Responded:</strong> 70</p>
-                    <p><strong>Jobs Completed:</strong> 50</p>
-                </div>
-            </div>
+
+        <!-- Side Bar -->
+        <section>
+
         </section>
     </main>
-    <!-- Footer -->
-    <footer class="p-6 bg-white shadow-md text-center">
-        <p>© 2023 Your Company. All rights reserved.</p>
-    </footer>
+
+
 </body>
 
 </html>
