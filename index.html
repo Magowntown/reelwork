@@ -1,122 +1,141 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <!-- ... -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
+    <title>Job Postings</title>
 </head>
 
+<<<<<<< HEAD
 <body>
     <!-- Header Section -->
     <nav>
         
+=======
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white p-6 flex items-center justify-between shadow-md">
+        <div class="flex items-center">
+            <img src="logo.png" alt="Logo" class="h-10 w-10 mr-4">
+            <a href="#" class="mx-3 text-gray-800">Home</a>
+            <a href="#" class="mx-3 text-gray-800">Job Postings</a>
+            <a href="#" class="mx-3 text-gray-800">Find Crews</a>
+        </div>
+        <div class="flex items-center">
+            <a href="#" class="mx-3 text-gray-800">Contact us</a>
+            <a href="#" class="mx-3 text-gray-800">Sign In</a>
+        </div>
+>>>>>>> 39a55f32f5e1993c9cda3392fc28cd14b6cdec25
     </nav>
-
-    <!-- Welcome Banner + Date/Time -->
-    <section>
-        <div id="welcome-date">
-            <div id="tsectioncontainer">
-                <div id="welcome-name">
-                    <h1>Welcome, <span id="name">Name</span></h1>
+    <!-- Main -->
+    <main class="flex justify-between p-6">
+        <!-- Search Bar -->
+        <section class="w-1/4 mr-4">
+            <div class="mb-4">
+                <input type="text" placeholder="Job title or keyword" class="w-full p-2 border border-gray-300 rounded">
+                <input type="text" placeholder="Location" class="w-full p-2 border border-gray-300 rounded mt-2">
+            </div>
+            <button class="btn btn-primary mb-4">Search</button>
+            <div>
+                <h2 class="text-lg font-bold mb-2">Filter Parameters</h2>
+                <button class="btn btn-outline mb-2">Filter 1</button>
+                <button class="btn btn-outline mb-2">Filter 2</button>
+            </div>
+        </section>
+        <!-- Job Postings -->
+        <section class="w-1/2">
+            <!-- Hero -->
+            <div class="hero min-h-screen"
+                style="background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
+                <div class="hero-overlay bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                    <div class="max-w-md">
+                        <button class="btn btn-primary">Get Started</button>
+                    </div>
                 </div>
-                <div id="date">
-                    <div id="date-display">Date</div>
+            </div>
+            <h1 class="flex items-center justify-center text-2xl font-bold mb-4">Job Postings</h1>
+            <!-- Job Cards -->
+            <div class="flex flex-col items-center justify-center">
+                <div class="card space-x-1 w-1/2 border bg-base-100 shadow-xl">
+                    <figure><img src="./images/assets/pngwing.com (2).png" alt="Job" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">
+                            New Job!
+                            <div class="badge badge-secondary">NEW</div>
+                        </h2>
+                        <p>New Local Job!</p>
+                        <div class="card-actions justify-end">
+                            <div class="badge badge-outline">Commercial</div>
+                            <div class="badge badge-outline">Production</div>
+                        </div>
+                    </div>
                 </div>
-                <div id="time-container-clock">
-                    <div id="time-container-clock-hours"></div>
-                    <div id="time-container-clock-minutes"></div>
-                    <div id="time-container-clock-seconds"></div>
+                <div class="card w-1/2 border bg-base-100 shadow-xl">
+                    <figure><img src="./images/assets/pngwing.com (2).png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">
+                            New Job!
+                            <div class="badge badge-secondary">NEW</div>
+                        </h2>
+                        <p>New Local Job!</p>
+                        <div class="card-actions justify-end">
+                            <div class="badge badge-outline">Commercial</div>
+                            <div class="badge badge-outline">Production</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-1/2 border bg-base-100 shadow-xl">
+                    <figure><img src="./images/assets/pngwing.com (2).png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">
+                            New Job!
+                            <div class="badge badge-secondary">NEW</div>
+                        </h2>
+                        <p>New Local Job!</p>
+                        <div class="card-actions justify-end">
+                            <div class="badge badge-outline">Commercial</div>
+                            <div class="badge badge-outline">Production</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section> <!-- //END -->
-
-    <!-- Personal Metrics -->
-    <main>
-        <summary id="account-metrics">
-            <div><a href="">Metric 1</a></div>
-            <div><a href="">Metric 2</a></div>
-            <div><a href="">Metric 3</a></div>
-            <div><a href="">Metric 4</a></div>
-        </summary> <!-- //END -->
-
-        <!-- Application Metrics -->
-        <figure id="applic-metrics">
-            <div id="title"></div>
+            <!-- Job Cards Ends -->
+        </section>
+        <!-- Suggested Jobs and Metrics -->
+        <section class="w-1/4 ml-4">
+            <!-- Suggested Jobs -->
             <div>
-                <p>Views</p>
-                <p>applications</p>
+                <h2 class="text-lg font-bold mb-2">Suggested Jobs</h2>
+                <!-- Job Cards -->
+                <div class="card bordered mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">Job title</h2>
+                        <p>Job description...</p>
+                    </div>
+                </div>
+                <!-- More cards... -->
             </div>
-            <div id="graph">
-                <a href="#"></a>
-            </div>
-        </figure> <!-- //END -->
-
-        <!-- Scheduling Section -->
-        <details id="appts">
-            <div id="sched-title">
-                <h3>Schedule</h3>
-                <select name="" id="" id="sort-by">sort By</select>
-            </div>
-            <div id="appt-list">
-                <ul id="appt-item">
-                    <li><a href="">Meeting</a></li>
-                    <li><a href="">Meeting</a></li>
-                    <li><a href="">Meeting</a></li>
-                </ul>
-            </div>
-        </details>
-    </main> <!-- //END -->
-
-    <!-- Job Listings Section -->
-    <main id="job-postings">
-        <div id="job-cards">
+            <!-- Metrics -->
             <div>
-                <img src="" alt="logo">
-                <a href="">Job Listing</a>
+                <h2 class="text-lg font-bold mb-2">Your Metrics</h2>
+                <div class="p-2 bg-white shadow rounded">
+                    <p class="stat-desc"><strong>Jobs Applied:</strong> Jan 1st - Feb 1st</p>
+                    <div class="stat">
+                        <div class="stat-figure">101</div>
+                    </div>
+                    <p><strong>Jobs Responded:</strong> 70</p>
+                    <p><strong>Jobs Completed:</strong> 50</p>
+                </div>
             </div>
-            <div>
-                <img src="" alt="logo">
-                <a href="">Job Listing</a>
-            </div>
-            <div>
-                <img src="" alt="logo">
-                <a href="">Job Listing</a>
-            </div>
-            <div>
-                <img src="" alt="logo">
-                <a href="">Job Listing</a>
-            </div>
-        </div>
-    </main><!-- //END -->
-
-    <!-- Job Recommendations Section -->
-    <aside id="recommendations">
-        <div id="recom-list">
-            <a href="">recomjobs</a>
-            <a href="">recomjobs</a>
-            <a href="">recomjobs</a>
-            <a href="">recomjobs</a>
-        </div>
-    </aside><!-- //END -->
-
-    <!-- Footer Section -->
-    <div id="footer">
-        <div id="footer-info">
-            <div id="footer-info-links">
-                <a href="">About</a>
-                <a href="">Contact</a>
-                <a href="">Terms of Use</a>
-                <a href="">Privacy Policy</a>
-            </div>
-            <div id="footer-info-copy">
-                <p>&copy; 2020</p>
-            </div>
-        </div>
-    </div> <!-- //END -->
-
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="p-6 bg-white shadow-md text-center">
+        <p>© 2023 Your Company. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
