@@ -32,12 +32,20 @@
             <input type="text" placeholder="Search by title, skill, or company"
                 class="input input-bordered input-xs w-full max-w-xs" />
             <!-- Region Search -->
-            <input type="text" placeholder="City, State, or Zip Code" id="input-box"
-                class="input input-bordered input-sm w-full max-w-xs" />
+            <div>
+                <div class="search-box rounded-lg">
+                    <div class="container flex items-center">
+                        <input type="text" id="input-box" placeholder="Search Regions"
+                            class="input input-bordered input-xs w-full max-w-xs">
+                    </div>
+                    <div class="results max-h-64 overflow-y-scroll">
+                        <!-- Results of search will show here -->
+                    </div>
+                </div>
+            </div>
             <div>
                 <button class="btn btn-xs sm:btn-sm sm:h-10 md:btn-md lg:btn-lg">Search</button>
             </div>
-
         </section>
 
         <!-- Job Feed Section -->
