@@ -254,7 +254,7 @@ function display(result) {
   const content = result.map((regions) => {
     return `<li class="list-none rounded-md py-4 px-4 cursor-pointer hover:bg-sky-400">${regions}</li>`;
   });
-  resultsBox.innerHTML = `<ul class="border-t-2 border-grey">${content.join(
+  resultsBox.innerHTML = `<ul class="bg-white border-t-2 border-grey overflow-auto">${content.join(
     ""
   )}</ul>`;
 }
