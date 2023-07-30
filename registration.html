@@ -1,0 +1,144 @@
+<!-- 
+Build the registration page for your case study app. After “registration”, it redirects them to a “dashboard” (this dashboard will be another page, and can be an empty page).
+
+(If your Figma prototype doesn’t have a register section, use Google’s as an inspiration) 
+
+Key features:
+
+Don’t accept an empty input
+The passwords match
+the email is a valid email, design your logic using this idea (the emailRegex).
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>Registration Page</title>
+</head>
+
+<body>
+
+    <main class="flex">
+        <section class="h-screen w-1/2 min-[320px]:w-0 md:w-1/2">
+            <img class="object-cover h-screen w-500" src="./images/signupbanner.jpg" alt="crew personnel artwork">
+        </section>
+
+
+        <section class="flex justify-center bg-slate-50 min-[320px]:w-0 md:w-1/2 h-screen">
+            <form id="registration-form" class="flex flex-col justify-center my-4 w-1/2 gap-5">
+                <!-- Create Account Banner -->
+                <div class="flex flex-col justify-center items-center gap-2 ">
+                    <div class="text-gray-900 text-3xl font-bold leading-10">Create Account</div>
+                    <div class="text-neutral-400 text-lg font-medium leading-normal py-4">Find your next opportunity
+                    </div>
+                </div>
+                <!-- Sign up with Google and Linkdin -->
+                <div class="flex justify-center gap-5">
+                    <button class="pl-4 pr-12 py-3 bg-emerald-500 rounded-lg justify-start items-center gap-2.5 flex">
+                        <img src="./images/logos/google.svg" class="w-6 h-6 relative">
+                        <div class="text-white text-xs font-semibold leading-normal">Sign up with Google</div>
+                    </button>
+                    <button class="pl-4 pr-12 py-3 bg-gray-900 rounded-lg justify-start items-center gap-2.5 flex">
+                        <div class="w-6 h-6 relative">
+                            <img src="./images/logos/linkedin.svg" class="w-5 h-5 relative">
+                        </div>
+                        <div class="text-white text-xs font-semibold leading-normal">Sign up with Linkdin</div>
+                    </button>
+                </div>
+                <!-- or Sign up with Email Banner-->
+                <div class="flex justify-center items-center gap-7 py-4">
+                    <div class="w-40 h-px border border-neutral-400"></div>
+                    <div class="text-zinc-500 text-base font-medium">or Sign up with Email</div>
+                    <div class="w-40 h-px border border-neutral-400"></div>
+                </div>
+
+                <!-- Sign up with Email Form -->
+
+                <!-- First & Last Names -->
+                <div class="flex justify-between space-x-2">
+                    <div class="w-3/4 h-12 relative bg-white border rounded-full">
+                        <input type="text" class="border w-full p-3 rounded-full bg-white" id="firstNameInput"
+                            placeholder="First Name" />
+                    </div>
+                    <div class="w-3/4 h-12 relative bg-white border rounded-full">
+                        <input type="text" class="border w-full p-3 rounded-full bg-white" id="lastNameInput"
+                            placeholder="last Name" />
+                    </div>
+                </div>
+                <!-- Email -->
+                <div class="flex-col items-center space-y-2">
+                    <input type="email" id="emailInput" class="border w-full p-3 rounded-full bg-white" name="email"
+                        onkeyup="emailCheck()" onfocus="emailCheck()" onblur="emailCheck()"
+                        placeholder="Email Address" />
+                    <!-- @ error needed -->
+                    <span id="emailError" class="text-red-500"></span>
+                </div>
+                <!-- Password Check -->
+                <div class="flex-col items-center space-y-2">
+                    <input type="password" id="psw" class="border w-full p-3 rounded-full bg-white" name="password"
+                        onblur="pswVerification()" onkeyup="pswVerification()" onfocus="pswVerification()"
+                        placeholder="Password" />
+                    <div class="flex flex-col justify-center text-sm">
+                        <span id="pswErrorBlank" class="text-red-500"></span>
+                        <span id="pswErrLength" class="text-red-500"></span>
+                        <span id="pswErrNum" class="text-red-500"></span>
+                        <span id="pswErrUpCase" class="text-red-500"></span>
+                        <span id="pswErrLowCase" class="text-red-500"></span>
+                    </div>
+
+
+                    <input type="password" id="pswConfirm" class="border w-full p-3 rounded-full bg-white"
+                        name="confirm_password" onblur="pswMatch()" onkeyup="pswMatch()" onfocus="pswMatch()"
+                        placeholder="Confirm Password" />
+                    <span id="pswMatchError" class="text-red-500"></span>
+                </div>
+                <!-- Captcha Checkbox -->
+                <div
+                    class="flex w-1/2 md:w-fit px-5 py-3.5 bg-white border rounded-lg justify-start items-center gap-3.5">
+                    <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
+                        <input
+                            class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                            type="checkbox" value="" id="captchaCheckBox" />
+                    </div>
+                    <div class="text-neutral-400 text-base font-sm leading-normal">I’m not a robot</div>
+                    <img class="w-7 h-9" src="./images/logos/reCaptcha.png" />
+                </div>
+                <!-- Sign Up Button -->
+                <button class="flex w-full p-3.5 bg-emerald-500 rounded-lg justify-center items-center">
+                    <div id="signUpBtn" class="text-center text-white text-base font-bold" onsubmit="register()">Sign Up
+                    </div>
+                </button>
+                <!-- Terms and Conditions Checkbox-->
+                <div class="flex justify-start items-center gap-2">
+                    <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
+                        <input
+                            class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                            type="checkbox" value="" id="termsCheckBox" />
+                    </div>
+                    <div class="w-96"><span class="text-neutral-400 text-base font-medium leading-normal">By continuing
+                            you
+                            accept our standard </span><span
+                            class="text-emerald-500 text-base font-medium leading-normal">terms and
+                            conditions</span><span class="text-neutral-400 text-base font-medium leading-normal"> and
+                            our </span><span class="text-emerald-500 text-base font-medium leading-normal">privecy
+                            policy</span></div>
+                </div>
+                <div class="flex justify-center items-center w-fit text-center gap-2"><span
+                        class="text-zinc-700 text-base font-medium">Already
+                        have
+                        an account? </span>
+                    <a href="#" class="text-emerald-500 text-base font-medium leading-normal">Log
+                        In</a>
+
+                </div>
+            </form>
+    </main>
+
+    <script type="text/javascript" src="./js/register.js"></script>
+</body>
+
+</html>
