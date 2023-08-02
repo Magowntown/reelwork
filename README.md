@@ -10,6 +10,62 @@ This project is a simple HTML/CSS project that uses [TailwindCSS](https://tailwi
 
 The project concept is to create a recruiting platform for the production staff of filming crews in the New England region of Northern America. The objective, is to help fill an otherwise empty void in the industry, and to help connect people with jobs. As it progresses, it will be updated with Javascript, tailwindCSS, SQL, React, and Node.js. At it's deployment, I hope this project will help fulfill both my journey into the world of web development, but also help others find work in their respective industry.
 
+## User Journey
+
+```mermaid
+journey
+    title User Journey in Job Application System
+    section Employer Journey
+      Register: 1: Employer
+      Post Job: 2: Employer
+      Review Applications: 3: Employer
+      Assign Candidate: 4: Employer
+    section Candidate Journey
+      Register: 1: Candidate
+      Search Jobs: 2: Candidate
+      Apply for Job: 3: Candidate
+      Accept Job: 4: Candidate
+```
+
+## Wireframe
+
+```mermaid
+erDiagram
+  Employer {
+    string name
+    string category
+    string location
+    string industry
+    string size
+  }
+  Job {
+    string title
+    string category
+    string type
+    string status
+    string description
+    string requirements
+    string salary
+  }
+  Candidate {
+    string name
+    string category
+    string skills
+    string experience
+    string education
+  }
+  Application {
+    string status
+  }
+  Employer ||--o{ Job : posts
+  Job ||--o{ Candidate : applies
+  Job }o--|| Candidate : assigns
+  Employer ||--o{ Candidate : views
+  Candidate ||--o{ Employer : follows
+  Application }|..|{ Job : applies_to
+  Application }|..|{ Candidate : made_by
+```
+
 ## Personal Starting Checklist
 
 - [x] Bootstrap the project `mkdir  .....`
@@ -22,7 +78,9 @@ The project concept is to create a recruiting platform for the production staff 
   - 6. add my `link:css` point to `./style.css`
   - 7. Do some backflips (highly optional)
 - [x] Setup HTML semantic structure
-- [ ] ... (TBD)
+- [x] Create a User Journey with a flowchart
+- [x] create a wireframe of the project
+- [ ] (TBD)
 
 # Setup
 
