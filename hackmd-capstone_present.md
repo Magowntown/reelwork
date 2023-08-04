@@ -8,7 +8,7 @@ type: slide
 
 <!-- A Screenshot of a section of the App) -->
 
-![A Screenshot of a section of the App](https://i.imgur.com/Ww9UeKn.png)
+<img width=800 height=600 src="https://i.imgur.com/Ww9UeKn.png">
 
 ---
 
@@ -43,16 +43,31 @@ type: slide
 
 ---
 
-### 🛤️ The Process
+## 🛤️ The Process
 
 <!-- itemized the key parts of your process for building this app (framed around the milestones) -->
 
+---
+
+## Stage 1:
+
 - ✅ Identified the problem and defined the requirements for the solution.
 - ✅ Designed the database structure and created an Entity-Relationship diagram.
+
+---
+
+## Stage 2:
+
 - ✅ Developed & implemented user journey diagrams for both employers and candidates.
 - ✅ Developed the front-end application to interact with the database.
+
+---
+
+## Stage 3:
+
 - ⭕ Developed the front-end application to interact with the database.
 - ⭕ Deployed the application to the web.
+<p>🏆</p>
 
 ---
 
@@ -70,8 +85,8 @@ type: slide
      <td style="text-align: center">Node.js</td>
   </tr>
   <tr>
-    <td align="center"><img src="https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg" width=50 height=50;></td>
-    <td align="center"><img src="https://img.icons8.com/color/48/000000/nodejs.png" width=50 height=50></td>
+    <td align="center"><img src="https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg" width=100 height=100;></td>
+    <td align="center"><img src="https://img.icons8.com/color/48/000000/nodejs.png" width=150 height=150></td>
   </tr>
   <tr>
         <td>backend and database</td>
@@ -81,7 +96,7 @@ type: slide
 
 ---
 
-#### Wireframing
+## Wireframing
 
 <table>
   <tr>
@@ -89,7 +104,7 @@ type: slide
   </tr>
   <tr>
     <td align="center">
-        <img src="https://www.mermaidchart.com/img/icon-logo.svg" width=50 height=50>
+        <img src="https://www.mermaidchart.com/img/icon-logo.svg" width=100 height=100>
      </td>
   </tr>
   <tr>
@@ -99,44 +114,61 @@ type: slide
 
 ---
 
-#### Front-End:
+## Front-End:
+
+<img width=700 src="https://i.imgur.com/18keq3F.png">
+
+---
+
+## : FrameWork :
 
 <table>
   <tr>
      <td align="center">React</td>
      <td align="center">TypeScript</td>
-     <td align="center">CSS</td>
-     <td align="center">Tailwind CSS</td>
   </tr>
   <tr>
-    <td align="center"><img src="https://img.icons8.com/plasticine/100/000000/react.png" width=50 height=50></td>
-    <td align="center"><img src="https://img.icons8.com/color/48/000000/typescript.png" width=50 height=50></td>
-    <td align="center"><img src="https://img.icons8.com/color/48/000000/css3.png" width=50 height=50></td>
-    <td align="center"><img src="https://user-images.githubusercontent.com/25181517/202896760-337261ed-ee92-4979-84c4-d4b829c7355d.png" width=50 height=50></td>
+    <td align="center"><img src="https://img.icons8.com/plasticine/100/000000/react.png" width=100 height=100></td>
+    <td align="center"><img src="https://img.icons8.com/color/48/000000/typescript.png" width=100 height=100></td>
+
   </tr>
     <tr>
-            <td align="center">front-end framework</td>
-            <td align="center">static typing</td>
-            <td align="center">styling</td>
-            <td align="center">styling</td>
+    <td align="center">front-end framework</td>
+    <td align="center">static typing</td>
  </table>
 
 ---
 
-### 🏁 Summary 🏁
+## Styling
 
 <table>
   <tr>
-    <td>🚀</td>
-    <td>Problem</td>
-    <td>The film industry faces challenges in efficiently hiring staff and crews for projects.</td>
-    <td>🚀</td>
+     <td align="center">CSS</td>
+     <td align="center">Tailwind CSS</td>
   </tr>
   <tr>
-    <td>🚀</td>
-    <td>Solution</td>
-      <td><span style="color:blue">ReelWork </span>streamlines this process, enabling all to easily post, search, apply, & track new work. We categorize jobs effectively for a maintainable solution to the industry's hiring challenges.</td>
-    <td>🚀</td>
+    <td align="center"><img src="https://img.icons8.com/color/48/000000/css3.png" width=100 height=100></td>
+    <td align="center"><img src="https://user-images.githubusercontent.com/25181517/202896760-337261ed-ee92-4979-84c4-d4b829c7355d.png" width=100 height=100></td>
+  </tr>
+    <tr>
+            <td align="center">style sheet language</td>
+            <td align="center">utility-first CSS framework</td>
+ </table>
+
+---
+
+### 🏁 Next Steps 🏁
+
+<table>
+    <tr>
+            <td></td>
+        <td align="center"><img src="https://d26oc3sg82pgk3.cloudfront.net/files/media/edit/image/36952/article_full%401x.jpg" width=600></td>
+        <td></td>
+    </tr>
+  <tr>
+    <td></td>
+      <td align="center" width=700><span style="color:green">ReelWork </span>will provide a seamless transition for those in need of a effortless recruitment process.</td>
+    <td></td>
   </tr>
 </table>
 
