@@ -17,8 +17,18 @@ type: slide
 <!-- Share a brief detail on the problem you're trying to solve) -->
 <table>
     <tr>
-    <td style="border-style: solid">The film industry struggles with the fast-paced process of hiring staff & crews. 🤦</td>
-    <td style="border-style: solid">It is inefficient and stressful, with employers and candidates often struggling to find connections, referrals, and opportunities. 🤷</td>
+    <td align=center marginL style="border-style: solid">The film industry struggles with the fast-paced process of hiring staff & crews. 🤦</td>
+    </tr>
+</table>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAeaTEvqgoIvT9CKjmxwzfGfXVbImGlDW1ig&usqp=CAU">
+
+---
+
+## 😰
+
+<table>
+    <tr>
+    <td style="border-style: solid">It is inefficient and stressful for non-union workers, who are out of network. Employers and candidates often struggle to find connections, referrals, and opportunities. 🤷</td>
     </tr>
 
 </table>
@@ -29,7 +39,8 @@ type: slide
 
 <!-- Share your brief solution to this problem, your description should be non-technical) -->
 
-- ReelWork provides a streamlined platform for producers & directors to post categorized jobs and find suitable candidates in the network. 📢
+<p>ReelWork provides a streamlined platform for primarily non-union workers to find work through a legimate network used by Producers & Directors. </p>
+<p align=center>📢</p>
 
 ---
 
@@ -51,22 +62,35 @@ type: slide
 
 ## Stage 1:
 
-- ✅ Identified the problem and defined the requirements for the solution.
-- ✅ Designed the database structure and created an Entity-Relationship diagram.
+- ✅ Identified the problem.
+- ➡️ Those inside & outside the filming industry hindered by lack of medium
+
+---
+
+- ✅ Developed & implemented user journey diagrams for both employers and candidates.
+  <img src="https://showme.redstarplugin.com/d/4SM7Yk20">
 
 ---
 
 ## Stage 2:
 
-- ✅ Developed & implemented user journey diagrams for both employers and candidates.
-- ✅ Developed the front-end application to interact with the database.
+<table>
+  <tr>
+    <td>✅ Designed database structure + Entity-Relationship diagram.</td>
+    <td>
+      <img width=5000 src="https://showme.redstarplugin.com/d/QBxnSLbH">
+    </td>
+      <td colspan="2">✅ Safely deploy the database to the in-production app</td>
+  </tr>
+
+</table>
 
 ---
 
 ## Stage 3:
 
-- ⭕ Developed the front-end application to interact with the database.
-- ⭕ Deployed the application to the web.
+- ⭕ Developed the front-end application UI for API calls with the database.
+- ⭕ Build and Test the front-end for user interaction
 <p>🏆</p>
 
 ---
@@ -171,5 +195,7 @@ type: slide
     <td></td>
   </tr>
 </table>
+
+[Concept Page](https://reelwork.framer.ai/)
 
 ---
